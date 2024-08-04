@@ -1,0 +1,61 @@
+{
+  "name": "8d889d33-e3cc-4a2d-a607-bc30568548a4",
+  "displayName": "My Order Status",
+  "form": {
+    "parameters": [ {
+      "displayName": "ordernumber",
+      "required": true,
+      "entityType": "@OrderNumber",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What's the order number? For example ABCD123." ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To proceed with your order I will need an order number. Order numbers start with 4 characters and end with 3 numbers, such as ABCD123. Which order number may I use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "812f3415-07de-4a30-a62d-e8e46e903c92"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ " I missed that. To proceed with your order I will need an order number. Order numbers start with 4 characters and end with 3 numbers, such as ABCD123. Which order number may I use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6c7861a9-67d3-449c-b2cb-9f057e4bedf1"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ordernumber != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your order $session.params.ordernumber has been shipped, it can take up to approx 2 weeks before you will receive your items." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Is there anything else I can help you with?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3ae2a1a3-234c-45f9-97c9-632860899787"
+  } ]
+}

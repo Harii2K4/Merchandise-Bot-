@@ -1,0 +1,17 @@
+{
+  "name": "72f4d20f-9b3f-46ad-bab3-207f38e4ce5f",
+  "displayName": "redirect.anime.overview",
+  "parameters": [ {
+    "id": "number",
+    "entityType": "@sys.number"
+  }, {
+    "id": "animes",
+    "entityType": "@Anime"
+  }, {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000,
+  "description": "anime overview: The anime supported by the store ",
+  "numTrainingPhrases": 7
+}

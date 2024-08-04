@@ -1,0 +1,162 @@
+{
+  "name": "a019080f-621f-405c-bf9c-f68a4c9c03d3",
+  "displayName": "Product",
+  "form": {
+    "parameters": [ {
+      "displayName": "animes",
+      "required": true,
+      "entityType": "@Anime",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "You didn't mention which anime series  you are interested in. You can ask me to buy the $session.params.merch of the series you like or ask about our collection. How can I help?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Our Collection"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand what you just said. Ask me about our collection." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4c092db8-d67d-4d4c-a34b-b2b51d41ca49"
+        }, {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I missed that. Please ask me about our collection" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "75650eaa-f037-4d8c-a419-fb0659d0ffae"
+        } ]
+      },
+      "convertPhoneticAlphabets": true
+    }, {
+      "displayName": "merch",
+      "required": true,
+      "entityType": "@Merch",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand what you just said. Which merchandise item do you want?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6157da4c-2b69-4e44-bdd1-934acec34ec9"
+        }, {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I missed that. Which merchandise item do you want?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d0df3044-0c31-4570-9124-160311b0e743"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.animes != \"null\" AND $session.params.merch = \"Mangas\" AND $session.params.volume = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manga",
+    "name": "d36266c2-ec4f-44e1-a3f6-03d491a76eb5"
+  }, {
+    "condition": "$session.params.animes != \"null\" AND $session.params.mangatype = \"colored\" AND $session.params.volume != \"null\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price ",
+        "value": 15
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "ca69fd40-2c64-4d32-ab9d-5c2892042b81"
+  }, {
+    "condition": "$session.params.animes != null AND $session.params.merch = \"T Shirt\" AND $session.params.shirtsize != \"null\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price",
+        "value": 30
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "ff37b2d9-1483-41d7-bd78-69e041d69725"
+  }, {
+    "condition": "$session.params.animes != null AND $session.params.mangatype = \"uncolored\" AND $session.params.volume != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price",
+        "value": 10
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "4c23dd67-b2f9-4f01-9c80-85fd8d9cdf55"
+  }, {
+    "condition": "$session.params.animes != null AND $session.params.merch = \"Longsleeve\" AND $session.params.shirtsize != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price",
+        "value": 35
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "31b54416-0c51-4ee5-813d-26ba096296b5"
+  }, {
+    "condition": "$session.params.merch = \"Poster\" AND $session.params.size = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Poster",
+    "name": "c2561368-a152-4a97-90b3-580d862b27f8"
+  }, {
+    "condition": "$session.params.animes != \"null\" AND $session.params.merch = \"Poster\" AND $session.params.size = \"A3\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price",
+        "value": 6
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "12784acc-aa87-4a2d-895c-f00a57cd0c0b"
+  }, {
+    "condition": "$session.params.animes != \"null\" AND $session.params.merch = \"Poster\" AND $session.params.size = \"A2\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "price",
+        "value": 8
+      } ]
+    },
+    "targetPage": "confirmation",
+    "name": "df97427b-a972-4bcb-a4a3-cea1867e6782"
+  } ]
+}

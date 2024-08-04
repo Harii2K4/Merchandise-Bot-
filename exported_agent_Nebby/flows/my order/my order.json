@@ -1,0 +1,129 @@
+{
+  "name": "2276ae33-0758-4417-bdb6-fea9e2990a57",
+  "displayName": "my order",
+  "transitionRoutes": [ {
+    "intent": "redirect.my.order",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "My Order",
+    "name": "b0718311-adcd-4950-ab81-b66178ace36d"
+  }, {
+    "intent": "redirect.my.order.status",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "My Order Status",
+    "name": "49e8ba96-a07e-4295-b389-4672951935eb"
+  }, {
+    "intent": "redirect.my.order.canceled",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "My Order Cancellation",
+    "name": "3154c8c8-9a3a-41a8-95e0-a9ad84738761"
+  }, {
+    "intent": "redirect.end",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for contacting Vinzo! Have a nice day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "93eaac40-836a-4feb-9183-6f933f4a56de"
+  }, {
+    "intent": "redirect.home",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "d95e864b-153f-45b8-a00c-580cbfd236b0"
+  }, {
+    "intent": "redirect.my.order.canceled",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "my order",
+    "name": "36f72ab8-42f9-4abc-b792-ee0d76f00ea2"
+  }, {
+    "intent": "redirect.my.order.status",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "my order",
+    "name": "63d97ff8-260b-462d-bb17-541bff732030"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn't get that. Can you please rephrase?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I'm sorry, I don't understand. Can you please rephrase?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I don't understand, please rephrase." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Sorry, I didn't get that. What was that?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I didn't get that, can you please rephrase?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fdec79ba-375d-4d46-8971-85f836cbec81"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I didn't receive an answer. Can you say it again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I missed your answer, can you say it again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Sorry, I didn't hear anything. Can you say it again?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I couldn't hear what you were saying, what was that?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "I'm sorry, I missed your answer. What were you trying to say?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cd0db7fc-019f-44fa-84a2-9cbe35bd98b1"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  }
+}

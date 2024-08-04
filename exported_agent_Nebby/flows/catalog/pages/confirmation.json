@@ -1,0 +1,98 @@
+{
+  "name": "fb4185e3-b12e-45b9-964d-d8cb1b100305",
+  "displayName": "confirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes, confirm"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.merch = \"Mangas\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Manga: $session.params.animes - $session.params.category($session.params.mangatype) costs $$session.params.price. Shall I continue to order?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.merch = \"T Shirt\" OR $session.params.merch = \"Longsleeve\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A $session.params.merch of $session.params.animes size: $session.params.shirtsize costs $$session.params.price. Shall I continue to order?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.merch = \"Poster\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A $session.params.merch of $session.params.animes size: $session.params.size costs $$session.params.price. Shall I continue to order?" ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "It looks like something went wrong with your order. You can say \"Reset\", to restart the order process." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "confirm.proceed.order",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "order process",
+    "name": "abc55e41-789b-4cf2-ac85-0c7ed54e2741"
+  }, {
+    "intent": "decline.proceed.order",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "animes",
+        "value": "null"
+      }, {
+        "parameter": "merch",
+        "value": "null"
+      }, {
+        "parameter": "shirtsize",
+        "value": "null"
+      }, {
+        "parameter": "category",
+        "value": "null"
+      }, {
+        "parameter": "mangatype",
+        "value": "null"
+      }, {
+        "parameter": "price",
+        "value": "null"
+      }, {
+        "parameter": "restart",
+        "value": "true"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4d619ecf-2df5-44db-9dfe-6cf3fe86e01b"
+  } ]
+}

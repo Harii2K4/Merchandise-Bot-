@@ -1,0 +1,27 @@
+{
+  "entities": [ {
+    "value": "Small ",
+    "synonyms": [ "S", "Small " ],
+    "languageCode": "en"
+  }, {
+    "value": "Medium ",
+    "synonyms": [ "m", "Medium " ],
+    "languageCode": "en"
+  }, {
+    "value": "Large",
+    "synonyms": [ "Large", "L" ],
+    "languageCode": "en"
+  }, {
+    "value": "XL",
+    "synonyms": [ "Extra Large", "XL" ],
+    "languageCode": "en"
+  }, {
+    "value": "XXL",
+    "synonyms": [ "Double XL", "Extra Extra Large", "XXL" ],
+    "languageCode": "en"
+  }, {
+    "value": "XXXL",
+    "synonyms": [ "X3 Large", "XXXL" ],
+    "languageCode": "en"
+  } ]
+}

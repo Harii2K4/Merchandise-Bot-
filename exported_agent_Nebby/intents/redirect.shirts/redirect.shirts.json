@@ -1,0 +1,13 @@
+{
+  "name": "0e675302-c4c2-48f6-aa3f-a9def38b4bde",
+  "displayName": "redirect.shirts",
+  "parameters": [ {
+    "id": "animes",
+    "entityType": "@Anime"
+  }, {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

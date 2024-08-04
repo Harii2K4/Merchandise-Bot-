@@ -1,0 +1,44 @@
+{
+  "name": "6c2bff21-7a26-494e-b033-abc7d7b6c61b",
+  "displayName": "Poster",
+  "form": {
+    "parameters": [ {
+      "displayName": "size",
+      "required": true,
+      "entityType": "@Size",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is the size of the poster you want" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "A3"
+                }, {
+                  "text": "A2"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.size != \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product",
+    "name": "ff274f33-86fc-4634-ac6f-ba7831fef856"
+  } ]
+}

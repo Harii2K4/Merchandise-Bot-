@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I am really not a fan of "
+    }, {
+      "text": "One piece",
+      "parameterId": "anime"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can't stand the  sight of ",
+      "auto": true
+    }, {
+      "text": "Naruto",
+      "parameterId": "anime",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am not a fan of ",
+      "auto": true
+    }, {
+      "text": "Dragon Ball Z",
+      "parameterId": "anime",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I don't like ",
+      "auto": true
+    }, {
+      "text": "Bleach",
+      "parameterId": "anime",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

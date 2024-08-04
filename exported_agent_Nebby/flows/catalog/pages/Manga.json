@@ -1,0 +1,74 @@
+{
+  "name": "670587b3-9ead-4931-a437-bf958228f330",
+  "displayName": "Manga",
+  "form": {
+    "parameters": [ {
+      "displayName": "volume",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand if you want Bleach, Dragon Ball Z, Naruto, or One Piece. Which of these do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Bleach"
+                  }, {
+                    "text": "DBZ"
+                  }, {
+                    "text": "One Piece"
+                  }, {
+                    "text": "Naruto"
+                  }, {
+                    "text": "Price?"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "81bcb834-84ad-4381-a80c-6575a3d76950"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We have all the volumes of the manga series Bleach, Dragon Ball Z, One Piece, and Naruto. Which one are you interested in?" ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "category",
+      "value": "manga"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "redirect.price",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Price",
+    "name": "e541ae2b-b80c-4ef2-a5a4-baf798bf26bd"
+  }, {
+    "condition": "$page.params.volume != \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manga Type",
+    "name": "75280942-4be3-47cb-aa15-e96d1f0a8c2c"
+  } ]
+}

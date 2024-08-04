@@ -1,0 +1,80 @@
+{
+  "name": "e5851fa4-2659-482d-abbb-2264b017710f",
+  "displayName": "Price",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.category = \"shirts\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A t-shirt costs $30 and a longsleeve costs $35." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.category = \"manga\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A uncolored manga costs $10. A colored manga costs $15." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "condition": "$session.params.category = \"Poster\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A poster of size A3 costs $6. A poster of size A2 costs $8." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "A t-shirt costs $30 and a longsleeve costs $35.A uncolored manga costs $10. A colored manhga costs $15. A poster of size A3 costs $6. A poster of size A2 costs $8." ]
+            },
+            "languageCode": "en"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.category = \"shirts\" AND $session.params.merch = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "shirts",
+    "name": "011a15a1-47a2-47a1-ad76-5a7be750020e"
+  }, {
+    "condition": "$session.params.category = \"shirts\" AND $session.params.size = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Shirt Size",
+    "name": "c367ea55-e381-4a2b-ad98-d8eade6f52b8"
+  }, {
+    "condition": "$session.params.category = \"manga\" AND $session.params.animes = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manga",
+    "name": "94b6ab30-e349-4bcf-83a3-297dafffc68e"
+  }, {
+    "condition": "$session.params.category = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product Overview",
+    "name": "766a571b-85e0-42ed-bd82-03a479e85eb5"
+  } ]
+}

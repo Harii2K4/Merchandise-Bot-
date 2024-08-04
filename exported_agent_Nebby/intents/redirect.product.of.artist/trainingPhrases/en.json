@@ -1,0 +1,164 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Yes of ",
+      "auto": true
+    }, {
+      "text": "naruto",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "bleach",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am a ",
+      "auto": true
+    }, {
+      "text": "dbz",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": " fan!",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Anything of ",
+      "auto": true
+    }, {
+      "text": "dbz",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Go for it",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Yep, give me items of ",
+      "auto": true
+    }, {
+      "text": "one",
+      "parameterId": "number",
+      "auto": true
+    }, {
+      "text": " piece",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Yes, I want to order merchandise",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want ",
+      "auto": true
+    }, {
+      "text": "naruto",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": " stuff",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "yes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Shirts of The ",
+      "auto": true
+    }, {
+      "text": "naruto",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": " that would be nice",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Give me merch of ",
+      "auto": true
+    }, {
+      "text": "one",
+      "parameterId": "number",
+      "auto": true
+    }, {
+      "text": " piece",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Give me merch of ",
+      "auto": true
+    }, {
+      "text": "dbz",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Give me merch of ",
+      "auto": true
+    }, {
+      "text": "naruto",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Give me merch of ",
+      "auto": true
+    }, {
+      "text": "bleach",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Yeah, let's shop",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

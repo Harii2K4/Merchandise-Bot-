@@ -1,0 +1,110 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Please order me the ",
+      "auto": true
+    }, {
+      "text": "bleach",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "manga",
+      "parameterId": "merch",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Purchase the  ",
+      "auto": true
+    }, {
+      "text": "dbz",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "t-shirt",
+      "parameterId": "merch",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Buy a longsleeve shirt of ",
+      "auto": true
+    }, {
+      "text": "one",
+      "parameterId": "number",
+      "auto": true
+    }, {
+      "text": " piece",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Get me a ",
+      "auto": true
+    }, {
+      "text": "poster",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": " of ",
+      "auto": true
+    }, {
+      "text": "naruto",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Let me buy the ",
+      "auto": true
+    }, {
+      "text": "manga",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": " of ",
+      "auto": true
+    }, {
+      "text": "bleach",
+      "parameterId": "animes",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to buy a ",
+      "auto": true
+    }, {
+      "text": "t-shirt",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": " of ",
+      "auto": true
+    }, {
+      "text": "dbz",
+      "parameterId": "animes",
+      "auto": true
+    }, {
+      "text": ", size S",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "528a8a51-b29b-4ce6-9abd-f344b6761400",
+  "displayName": "redirect.manga",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  }, {
+    "id": "animes",
+    "entityType": "@Anime"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

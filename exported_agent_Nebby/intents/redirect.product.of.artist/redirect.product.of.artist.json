@@ -1,0 +1,13 @@
+{
+  "name": "91329f85-786b-416d-bf7b-dfcb1931798f",
+  "displayName": "redirect.product.of.artist",
+  "parameters": [ {
+    "id": "animes",
+    "entityType": "@Anime"
+  }, {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 15
+}

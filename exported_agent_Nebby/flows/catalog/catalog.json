@@ -1,0 +1,88 @@
+{
+  "name": "4b719156-1ebc-477d-a7eb-bec9634fd6ea",
+  "displayName": "catalog",
+  "transitionRoutes": [ {
+    "intent": "redirect.anime.overview",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anime Overview",
+    "name": "2ebcab30-df77-4d87-b1c7-8aab19be0941"
+  }, {
+    "intent": "redirect.product",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product",
+    "name": "7577e110-24c5-4f62-8a50-488228c98cc6"
+  }, {
+    "intent": "redirect.product.overview",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product Overview",
+    "name": "10d24291-d91f-48de-9588-90d94a8f4d94"
+  }, {
+    "intent": "redirect.product.of.artist",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product Overview",
+    "name": "7a5b46ff-9815-496f-95db-68db52ff9e85"
+  }, {
+    "intent": "redirect.shirts",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "shirts",
+    "name": "6c99c73b-4466-4449-91b3-84423fa66b86"
+  }, {
+    "intent": "redirect.manga",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manga",
+    "name": "f11fcf91-f22d-4edc-b629-82ac315027d8"
+  }, {
+    "intent": "redirect.end",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "d2f81619-757e-4375-9be0-86ba12bfd860"
+  }, {
+    "intent": "redirect.home",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "3d9e8dd1-cb57-43e5-8b20-5c6ad771fa2c"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2ba9489c-3fb3-4304-9a46-381ca9244c90"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "be9152f8-de9b-4f40-a570-876a1ff3c810"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  }
+}

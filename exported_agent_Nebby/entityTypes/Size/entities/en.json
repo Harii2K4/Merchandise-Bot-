@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "A2",
+    "synonyms": [ "a2", "A2" ],
+    "languageCode": "en"
+  }, {
+    "value": "A3",
+    "synonyms": [ "A3", "a3" ],
+    "languageCode": "en"
+  } ]
+}

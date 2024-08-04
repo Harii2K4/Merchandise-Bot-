@@ -1,0 +1,13 @@
+{
+  "name": "d1a140db-9053-4fd4-bfda-55b483aea5c0",
+  "displayName": "redirect.shirt.size",
+  "parameters": [ {
+    "id": "poster",
+    "entityType": "@Poster"
+  }, {
+    "id": "shirtsize",
+    "entityType": "@Shirtsize"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

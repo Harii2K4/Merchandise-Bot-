@@ -1,0 +1,179 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Welcome, I am Nebby the virtual agent of the Vinzo , a fictional merch store. You can order anime merchandise, ask questions about your order or shipping, and I can tell you more about or collections. How can I help?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "Which animes?"
+            }, {
+              "text": "Which products?"
+            }, {
+              "text": "About my order..."
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "564c1e0b-e369-4c7c-ace2-e2494676145a"
+  }, {
+    "intent": "redirect.anime.overview",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "8c36e4ae-1f64-4091-8936-966b44b39920"
+  }, {
+    "intent": "redirect.product.overview",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "612ad666-37bd-42d4-a997-9c66aead6dec"
+  }, {
+    "intent": "redirect.shirts",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "dd1b38d9-c4d8-456c-90e2-7d423ab70669"
+  }, {
+    "intent": "redirect.manga",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "49a9a5d7-2690-43ab-b8e1-889a78632b99"
+  }, {
+    "intent": "redirect.product",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "a69dcb3b-70e4-41b1-be53-5741cebeba02"
+  }, {
+    "intent": "redirect.product.of.artist",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "catalog",
+    "name": "c480c28e-3113-473b-9e3a-22434c044f89"
+  }, {
+    "intent": "redirect.shipping.info",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "customer care",
+    "name": "99fa5108-fa4f-4866-8079-f9181dd83dda"
+  }, {
+    "intent": "redirect.refund.info",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "customer care",
+    "name": "b9ec5e44-44ef-4322-bddb-6d932d74fb67"
+  }, {
+    "intent": "redirect.swapping.info",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "customer care",
+    "name": "c07c6451-8de2-4469-8e2a-40716bf25dae"
+  }, {
+    "intent": "redirect.my.order",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "my order",
+    "name": "ba5f489a-7ff2-4223-af47-275375fa060a"
+  }, {
+    "intent": "redirect.my.order.canceled",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "customer care",
+    "name": "21860caf-6ca9-4ab9-8971-f3e079f98ad7"
+  }, {
+    "intent": "redirect.my.order.status",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "customer care",
+    "name": "969f1fab-a03b-4dd8-b1bc-079baf65c37a"
+  }, {
+    "intent": "redirect.end",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for contacting Vinzo! Have a nice day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "b8b7d1ec-3b89-4b3a-b2d6-871131c33458"
+  }, {
+    "condition": "$session.params.restart = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Welcome back, as the virtual agent of Vinzo, I can help you order anime merchandise, you can ask questions about your order or shipping, and I can tell you more about our collections. How can I help?" ]
+        },
+        "languageCode": "en"
+      }, {
+        "payload": {
+          "richContent": [ [ {
+            "options": [ {
+              "text": "Which animes?"
+            }, {
+              "text": "Which products?"
+            }, {
+              "text": "About my order..."
+            } ],
+            "type": "chips"
+          } ] ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "de33b9c4-7987-4039-ac48-7e73d47dd554"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn't get that. Can you please rephrase?", "I'm sorry, I don't understand. Can you please rephrase?", "I don't understand, please rephrase?", "Sorry, I didn't get that. What was that?", "I didn't get that, can you please rephrase?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "84ca635c-e2b0-4676-b301-9084af625c11"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, I didn't receive an answer. Can you say it again?", "I missed your answer, can you say it again?", "Sorry, I didn't hear anything. Can you say it again?", "I couldn't hear what you were saying, what was that?", "I'm sorry, I missed your answer. What were you trying to say?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3d96f51d-d6f4-4c73-8c35-829718e0f6b7"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  }
+}

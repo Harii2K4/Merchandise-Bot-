@@ -1,0 +1,13 @@
+{
+  "name": "e74e6661-4418-4290-b477-3e164ef7b1cc",
+  "displayName": "confirm.animes.overview",
+  "parameters": [ {
+    "id": "animes",
+    "entityType": "@Anime"
+  }, {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

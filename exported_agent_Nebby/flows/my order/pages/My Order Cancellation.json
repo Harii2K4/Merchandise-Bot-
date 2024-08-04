@@ -1,0 +1,61 @@
+{
+  "name": "e29a1e37-5a58-4e43-81bc-3bc483b02cc9",
+  "displayName": "My Order Cancellation",
+  "form": {
+    "parameters": [ {
+      "displayName": "ordernumber",
+      "required": true,
+      "entityType": "@OrderNumber",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What's the order number? For example ABCD123." ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To proceed with your order I will need an order number. Order numbers start with 4 characters and end with 3 numbers, such as ABCD123. Which order number may I use?\r\n" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d4df49a4-a49d-4b1a-9180-47f194386615"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I missed that. To proceed with your order I will need an order number. Order numbers start with 4 characters and end with 3 numbers, such as ABCD123. Which order number may I use?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f41b855a-83d0-4bfc-8c34-b86d74628783"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.ordernumber != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your order $session.params.ordernumber has been canceled" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Is there anything else I can help you with?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a0cd63bb-6e6c-4eae-89b9-61c91b509b81"
+  } ]
+}

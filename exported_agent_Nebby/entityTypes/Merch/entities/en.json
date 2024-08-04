@@ -1,0 +1,23 @@
+{
+  "entities": [ {
+    "value": "T Shirt",
+    "synonyms": [ "T - Shirt", "t shirt", "T shirt", "T Shirt" ],
+    "languageCode": "en"
+  }, {
+    "value": "Longsleeve",
+    "synonyms": [ "Long Sleeves", "Longsleeve", "Longsleeves" ],
+    "languageCode": "en"
+  }, {
+    "value": "Phone Cases",
+    "synonyms": [ "phone case", "Phone Cases", "phone cover" ],
+    "languageCode": "en"
+  }, {
+    "value": "Poster",
+    "synonyms": [ "poster", "Poster" ],
+    "languageCode": "en"
+  }, {
+    "value": "Mangas",
+    "synonyms": [ "Mangas" ],
+    "languageCode": "en"
+  } ]
+}

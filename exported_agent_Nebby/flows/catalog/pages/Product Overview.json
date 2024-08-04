@@ -1,0 +1,222 @@
+{
+  "name": "df94f101-6e9c-4797-a2fe-b6ac4032624c",
+  "displayName": "Product Overview",
+  "form": {
+    "parameters": [ {
+      "displayName": "animes",
+      "required": true,
+      "entityType": "@Anime",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "From which of these animes would you like to order merchandise?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Dragon Ball Z"
+                }, {
+                  "text": "Bleach"
+                }, {
+                  "text": "One Piece"
+                }, {
+                  "text": "Naruto"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To buy merchandise you can choose between the following animes: Bleach, Dragon Ball Z, Naruto or One Piece. Which anime do you want to buy merchandise from?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Dragon Ball Z"
+                  }, {
+                    "text": "Bleach"
+                  }, {
+                    "text": "One Piece"
+                  }, {
+                    "text": "Naruto"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "628ddb17-0fbd-4657-8bcf-1e1666393f19"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To buy merchandise you can choose between the following animes: Bleach, Dragon Ball Z, Naruto or One Piece. Which artist were you trying to mention?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Dragon Ball Z"
+                  }, {
+                    "text": "Bleach"
+                  }, {
+                    "text": "Naruto"
+                  }, {
+                    "text": "One Piece"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f59e1c9a-70ed-4395-9069-96911186d24f"
+        } ]
+      },
+      "redact": true
+    }, {
+      "displayName": "merch",
+      "required": true,
+      "entityType": "@Merch",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which merchandise item do you want?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Shirts"
+                }, {
+                  "text": "Poster"
+                }, {
+                  "text": "Manga"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "We sell Shirts, Manga, and Poster  . Which of these items do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Shirts"
+                  }, {
+                    "text": "Poster"
+                  }, {
+                    "text": "Manga"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3e012463-2904-4482-b61d-3379f695ac5f"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand which merchandise item you wanted to buy. You can choose between: Shirts, Manga and Poster  . Which item do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Shirts"
+                  }, {
+                    "text": "Poster"
+                  }, {
+                    "text": "Manga"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "197c7c52-9947-4bc6-bf3e-8f839f192d7a"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We sell T-shirts, posters and mangas" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "redirect.shirts",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "shirts",
+    "name": "84c75475-ced4-4a92-b1ba-6c6580ef715b"
+  }, {
+    "intent": "redirect.manga",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manga",
+    "name": "d4bef95f-29e8-488e-8c4e-ffa4beba4f2e"
+  }, {
+    "intent": "redirect.price",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Price",
+    "name": "61715214-7f99-452e-bc4c-02f6c3204549"
+  }, {
+    "condition": "$session.params.animes != null AND $session.params.merch != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright! $session.params.merch of $session.params.animes, let's go!!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Product",
+    "name": "6c6b7544-857e-48ab-b104-819f87a6dcd8"
+  }, {
+    "condition": "$session.params.merch = \"Poster\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Poster",
+    "name": "992438b1-f7e4-4c07-b007-d4ff0a7fdf8a"
+  } ]
+}

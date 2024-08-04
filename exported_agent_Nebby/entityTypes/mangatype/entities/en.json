@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "colored",
+    "synonyms": [ "colored" ],
+    "languageCode": "en"
+  }, {
+    "value": "uncolored",
+    "synonyms": [ "uncolored" ],
+    "languageCode": "en"
+  } ]
+}

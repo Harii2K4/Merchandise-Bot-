@@ -1,0 +1,104 @@
+{
+  "name": "9c1b3103-48ab-4195-a979-07371c83d294",
+  "displayName": "Manga Type",
+  "form": {
+    "parameters": [ {
+      "displayName": "mangatype",
+      "required": true,
+      "entityType": "@mangatype",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Do you want the colored or uncolored version " ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Colored"
+                  }, {
+                    "text": "Uncolored"
+                  }, {
+                    "text": "Price?"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "279b1872-e46c-45ad-8719-4dfa31f5be97"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand if you mean  colored or uncolored , which one do you want" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Colored"
+                  }, {
+                    "text": "Uncolored"
+                  }, {
+                    "text": "Price?"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "54ecf335-4a87-4e7a-be65-5915ba6c1e9c"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Do you want the colored version or the uncolored version " ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Colored"
+          }, {
+            "text": "Uncolored"
+          }, {
+            "text": "Price?"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "redirect.price",
+    "triggerFulfillment": {
+    
+    },
+    "name": "23ec9d8d-0c29-4295-8703-31af99d310c2"
+  }, {
+    "condition": "$page.params.mangatype != \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product",
+    "name": "0933cb5c-9be4-481d-ac99-6b34a6c99e37"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "6e27f450-a8e3-4170-91f8-1804ebfdc4a6",
+  "displayName": "redirect.refund.info",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

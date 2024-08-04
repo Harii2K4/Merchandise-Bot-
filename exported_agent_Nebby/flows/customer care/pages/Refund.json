@@ -1,0 +1,20 @@
+{
+  "name": "56c4bc45-bd40-4eb5-a062-d27eeb0905e2",
+  "displayName": "Refund",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We offer free returns and refunds. We provide one free return label for each order. You can use it within 30 days from receiving your order. If your refund is accepted, we will refund the price you paid for your item back to your original payment method." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Is there anything else I can help you with?" ]
+      },
+      "languageCode": "en"
+    } ]
+  }
+}

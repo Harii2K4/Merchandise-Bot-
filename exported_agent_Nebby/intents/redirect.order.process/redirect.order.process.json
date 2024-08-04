@@ -1,0 +1,16 @@
+{
+  "name": "6d108fe0-7e6c-4829-bfd1-73469f5fd7b3",
+  "displayName": "redirect.order.process",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  }, {
+    "id": "animes",
+    "entityType": "@Anime"
+  }, {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

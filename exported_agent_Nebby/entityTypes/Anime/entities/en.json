@@ -1,0 +1,19 @@
+{
+  "entities": [ {
+    "value": "Bleach",
+    "synonyms": [ "Bleach" ],
+    "languageCode": "en"
+  }, {
+    "value": "Dragon Ball z",
+    "synonyms": [ "DBZ", "Dragon Ball z" ],
+    "languageCode": "en"
+  }, {
+    "value": "Naruto",
+    "synonyms": [ "Naruto" ],
+    "languageCode": "en"
+  }, {
+    "value": "One Peice",
+    "synonyms": [ "One Peice" ],
+    "languageCode": "en"
+  } ]
+}
